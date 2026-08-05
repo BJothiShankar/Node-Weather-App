@@ -20,7 +20,11 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get("", (req, res) => {
-  res.send("Home route is working!");
+  res.render("index", {
+    title: "Weather",
+    name: "Weather App",
+    year: new Date().getFullYear(),
+  });
 });
 
 app.get("/about", (req, res) => {
