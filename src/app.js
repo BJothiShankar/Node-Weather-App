@@ -101,6 +101,10 @@ app.get("*", (req, res) => {
   });
 });
 
+app.get("/test", (req, res) => {
+  res.send("Render is running the latest code!");
+});
+
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });
