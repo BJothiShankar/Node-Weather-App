@@ -1,0 +1,37 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 200 200"
+    width="200"
+    height="200"
+>
+    <!-- Sun -->
+    <circle cx="65" cy="65" r="28" fill="#FDB813"/>
+
+    <!-- Sun Rays -->
+    <g stroke="#FDB813" stroke-width="4" stroke-linecap="round">
+        <line x1="65" y1="20" x2="65" y2="5"/>
+        <line x1="65" y1="125" x2="65" y2="140"/>
+        <line x1="20" y1="65" x2="5" y2="65"/>
+        <line x1="125" y1="65" x2="140" y2="65"/>
+
+        <line x1="34" y1="34" x2="22" y2="22"/>
+        <line x1="96" y1="34" x2="108" y2="22"/>
+        <line x1="34" y1="96" x2="22" y2="108"/>
+        <line x1="96" y1="96" x2="108" y2="108"/>
+    </g>
+
+    <!-- Cloud -->
+    <g fill="#D9E3F0">
+        <circle cx="105" cy="90" r="28"/>
+        <circle cx="130" cy="78" r="24"/>
+        <circle cx="155" cy="92" r="22"/>
+        <rect x="85" y="90" width="90" height="28"/>
+    </g>
+
+    <!-- Rain -->
+    <g stroke="#3B82F6" stroke-width="5" stroke-linecap="round">
+        <line x1="105" y1="125" x2="98" y2="145"/>
+        <line x1="130" y1="125" x2="123" y2="145"/>
+        <line x1="155" y1="125" x2="148" y2="145"/>
+    </g>
+</svg>
