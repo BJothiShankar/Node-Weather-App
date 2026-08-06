@@ -18,7 +18,7 @@ const forecast = (latitude, longitude, callback) => {
           body.current.feelslike +
           " degrees out. The humidity is " +
           body.current.humidity +
-          "% .",
+          "%.",
       );
     }
   });
