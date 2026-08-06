@@ -19,7 +19,7 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", {
     title: "Weather",
     name: "Weather App",
@@ -99,10 +99,6 @@ app.get("*", (req, res) => {
     name: "Weather App",
     errorMessage: "Page not found.",
   });
-});
-
-app.get("/test", (req, res) => {
-  res.send("Render is running the latest code!");
 });
 
 app.listen(port, () => {
