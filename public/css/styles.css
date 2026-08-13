@@ -45,6 +45,7 @@ input {
   border: 1px solid #cccccc;
   padding: 8px;
   border-radius: 10px;
+  outline: none;
 }
 
 button {
@@ -55,4 +56,60 @@ button {
   padding: 8px;
   border-radius: 10px;
   margin-left: 10px;
+}
+.weather-form {
+  display: flex;
+  gap: 10px;
+}
+
+.weather-form input {
+  flex: 1;
+}
+
+.weather-form button {
+  margin-left: 0;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 0 12px;
+  }
+
+  header {
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  header a {
+    margin-right: 10px;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .weather-form {
+    flex-direction: column;
+  }
+
+  .weather-form input,
+  .weather-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
