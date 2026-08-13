@@ -1,23 +1,22 @@
 import request from "postman-request";
 
 const forecast = (latitude, longitude, callback) => {
-  const url = `http://api.weatherstack.com/current?access_key=e84129bc20b99e3b1452c36379b4e3ff&query=${latitude},${longitude}&units=f`;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code&temperature_unit=fahrenheit`;
 
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to weather service!", undefined);
     } else if (body.error) {
-      callback("Unable to find location", undefined);
+      callback(body.reason, undefined);
     } else {
       callback(
         undefined,
-        body.current.weather_descriptions[0] +
-          ". It is currently " +
-          body.current.temperature +
-          " degrees out. It feels like " +
-          body.current.feelslike +
-          " degrees out. The humidity is " +
-          body.current.humidity +
+        "The current temperature is " +
+          body.current.temperature_2m +
+          " degrees. It feels like " +
+          body.current.apparent_temperature +
+          " degrees. The humidity is " +
+          body.current.relative_humidity_2m +
           "%.",
       );
     }
