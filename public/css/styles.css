@@ -63,7 +63,8 @@ button {
 }
 
 .weather-form input {
-  flex: 1;
+  width: 300px;
+  box-sizing: border-box;
 }
 
 .weather-form button {
